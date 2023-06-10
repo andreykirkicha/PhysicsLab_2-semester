@@ -1,0 +1,334 @@
+\input{../main.tex}
+
+\begin{document}
+	\section*{Работа 2.4.1}	
+	\section*{Определение теплоты испарения жидкости}
+	\subsection*{Андрей Киркича, Б01-202, МФТИ, 2023}
+	\n
+	\textbf{Цель работы: }
+	измерение давления насыщенного пара жидкости при разных температурах; вычисление по полученным данным теплоты испарения с помощью уравнения Клапейрона-Клаузиуса.
+	\n\n
+	\textbf{В работе используются: }
+	темростат; герметический сосуд, заполненный исследуемой жидкостью; отсчётный микроскоп.
+	\subsection*{Теоретичские сведения}\n
+	Переход части молекул из жидкости в пар приводит к охлаждению жидкости, так как это обедняет её молекулами с большой кинетической энергией.\n\n
+	\und{Молярная теплота испарения} - количество теплоты, необходимое для изотермического испарения одного моля жидкости при внешнем давлении, равном упругости её насыщенных паров.
+	\subsection*{Методика измерений}\n
+	Теплоту испарения сложно посчитать непосредственно при помощи калориметра из-за неконтролируемых потерь тепла.\n\n
+	Будем использовать уравнение Клапейрона-Клаузиуса:
+	\beb{\frac{dP}{dT} = \frac{L}{T(V_2 - V_1)}}
+	\aw{где $P$ - давление насыщенного пара при температуре жидкости (и пара) $T$, $L$ - теплота испарения, $V_1$ - объём жидкости, $V_2$ - объём пара}
+	$V_1$, $V_2$ относятся к одному молю вещества.\n\n
+	Справочные данные показывают, что $V_1 \ll V_2$, поэтому объёмом $V_1$ можно пренебречь.\n\n
+	Уравнение Ван-дер-Ваальса:
+	\beb{\left (P + \frac{a}{V^2} \right )(V - b) = RT}
+	Из справочных данных видно, что величиной $b$ также можно пренебречь и при давлении меньше атмосферного поправка $\frac{a}{V^2}$ незначительна.\n\n
+	Будем описывать состояние газа следующим уравнением:
+	\beb{V = \frac{RT}{P}}
+	Тогда
+	\beb{L = \frac{RT^2}{P}\frac{dP}{dT} = -R \frac{d(\ln P)}{d(1 / T)}}
+	\n
+	В работе температура жидкости измеряется темрометром, давление пара определяется манометром.
+	\img{pic_1.png}{1.8}{Рисунок 1: схема экспериментальной установки}
+	\beb{P = \rho g \Delta h}
+	\subsection*{Результаты измерений}\n
+	Сначала температура повышалась с начальных $14 ^o$C до $31 ^o$C (пока хватало измерительной шкалы штангенциркуля, при помощи которого измерялась высота столба ртути), а затем понижалась. Через каждый градус Цельсия снимались показания. Было принято во внимание то, что термометр показывал температуру в термостате, но не внутри сосуда с исследуемой жидкостью. Мы ждали ещё порядка минуты после достижения нужной температуры перед тем, как снять показания. Из-за этого погрешность измерения температуры допускается больше, чем цена деления прибора.\n\n
+	Над одним столбиком ртути был маленький слой воды, но его высота принебрежимо мала по сравнению с высотой самого столбика. Плотность воды отличается от плотности ртути в порядок, поэтому с учётом вышесказанного можно считать, что его вкладом в давление можно пренебречь.\n\n
+	Также было сделано предположение (исходя из справочных данных), что плотность ртути прямо пропорциональна температуре. При расчётах эта зависимость учитывалась.\n
+	\begin{table}[H]
+	\centering
+	\resizebox{450pt}{!}{
+\begin{tabular}{|rrrrrr||rrrrrr|}
+\hline
+\multicolumn{6}{|c||}{Повышение температуры} &
+  \multicolumn{6}{c|}{Понижение температуры} \\ \hline \hline
+\multicolumn{1}{|c|}{$h_1$, мм} &
+  \multicolumn{1}{c|}{$h_2$, мм} &
+  \multicolumn{1}{c|}{$\rho$, кг/м$^3$} &
+  \multicolumn{1}{c|}{$T$, $^o$C} &
+  \multicolumn{1}{c|}{$\Delta h$, мм} &
+  \multicolumn{1}{c||}{$P$, Па} &
+  \multicolumn{1}{c|}{$h_1$, мм} &
+  \multicolumn{1}{c|}{$h_2$, мм} &
+  \multicolumn{1}{c|}{$\rho$, кг/м$^3$} &
+  \multicolumn{1}{c|}{$T$, $^o$C} &
+  \multicolumn{1}{c|}{$\Delta h$, мм} &
+  \multicolumn{1}{c|}{$P$, Па} \\ \hline
+\multicolumn{1}{|r|}{57} &
+  \multicolumn{1}{r|}{24} &
+  \multicolumn{1}{r|}{13561} &
+  \multicolumn{1}{r|}{13.8} &
+  \multicolumn{1}{r|}{33} &
+  43900 &
+  \multicolumn{1}{r|}{82} &
+  \multicolumn{1}{r|}{0} &
+  \multicolumn{1}{r|}{13518} &
+  \multicolumn{1}{r|}{31} &
+  \multicolumn{1}{r|}{82} &
+  \multicolumn{1}{r|}{108700} \\ \hline
+\multicolumn{1}{|r|}{57} &
+  \multicolumn{1}{r|}{24} &
+  \multicolumn{1}{r|}{13558} &
+  \multicolumn{1}{r|}{15} &
+  \multicolumn{1}{r|}{33} &
+  43900 &
+  \multicolumn{1}{r|}{79} &
+  \multicolumn{1}{r|}{3} &
+  \multicolumn{1}{r|}{13521} &
+  \multicolumn{1}{r|}{30} &
+  \multicolumn{1}{r|}{76} &
+  \multicolumn{1}{r|}{100800} \\ \hline
+\multicolumn{1}{|r|}{58} &
+  \multicolumn{1}{r|}{23} &
+  \multicolumn{1}{r|}{13555} &
+  \multicolumn{1}{r|}{16} &
+  \multicolumn{1}{r|}{35} &
+  46500 &
+  \multicolumn{1}{r|}{77} &
+  \multicolumn{1}{r|}{6} &
+  \multicolumn{1}{r|}{13523} &
+  \multicolumn{1}{r|}{29} &
+  \multicolumn{1}{r|}{71} &
+  \multicolumn{1}{r|}{94200} \\ \hline
+\multicolumn{1}{|r|}{59} &
+  \multicolumn{1}{r|}{22} &
+  \multicolumn{1}{r|}{13552} &
+  \multicolumn{1}{r|}{17} &
+  \multicolumn{1}{r|}{37} &
+  49200 &
+  \multicolumn{1}{r|}{75} &
+  \multicolumn{1}{r|}{7} &
+  \multicolumn{1}{r|}{13526} &
+  \multicolumn{1}{r|}{28} &
+  \multicolumn{1}{r|}{68} &
+  \multicolumn{1}{r|}{90200} \\ \hline
+\multicolumn{1}{|r|}{60} &
+  \multicolumn{1}{r|}{21} &
+  \multicolumn{1}{r|}{13549} &
+  \multicolumn{1}{r|}{18} &
+  \multicolumn{1}{r|}{39} &
+  51800 &
+  \multicolumn{1}{r|}{73} &
+  \multicolumn{1}{r|}{8} &
+  \multicolumn{1}{r|}{13529} &
+  \multicolumn{1}{r|}{27} &
+  \multicolumn{1}{r|}{65} &
+  \multicolumn{1}{r|}{86300} \\ \hline
+\multicolumn{1}{|r|}{61} &
+  \multicolumn{1}{r|}{20} &
+  \multicolumn{1}{r|}{13547} &
+  \multicolumn{1}{r|}{19} &
+  \multicolumn{1}{r|}{41} &
+  54500 &
+  \multicolumn{1}{r|}{72} &
+  \multicolumn{1}{r|}{10} &
+  \multicolumn{1}{r|}{13531} &
+  \multicolumn{1}{r|}{26} &
+  \multicolumn{1}{r|}{62} &
+  \multicolumn{1}{r|}{82300} \\ \hline
+\multicolumn{1}{|r|}{63} &
+  \multicolumn{1}{r|}{19} &
+  \multicolumn{1}{r|}{13546} &
+  \multicolumn{1}{r|}{20} &
+  \multicolumn{1}{r|}{44} &
+  58500 &
+  \multicolumn{1}{r|}{70} &
+  \multicolumn{1}{r|}{11} &
+  \multicolumn{1}{r|}{13534} &
+  \multicolumn{1}{r|}{25} &
+  \multicolumn{1}{r|}{59} &
+  \multicolumn{1}{r|}{78300} \\ \hline
+\multicolumn{1}{|r|}{64} &
+  \multicolumn{1}{r|}{17} &
+  \multicolumn{1}{r|}{13543} &
+  \multicolumn{1}{r|}{21} &
+  \multicolumn{1}{r|}{47} &
+  62400 &
+  \multicolumn{1}{r|}{69} &
+  \multicolumn{1}{r|}{14} &
+  \multicolumn{1}{r|}{13536} &
+  \multicolumn{1}{r|}{24} &
+  \multicolumn{1}{r|}{55} &
+  \multicolumn{1}{r|}{73000} \\ \hline
+\multicolumn{1}{|r|}{65} &
+  \multicolumn{1}{r|}{16} &
+  \multicolumn{1}{r|}{13540} &
+  \multicolumn{1}{r|}{22} &
+  \multicolumn{1}{r|}{49} &
+  65100 &
+  \multicolumn{1}{r|}{67} &
+  \multicolumn{1}{r|}{15} &
+  \multicolumn{1}{r|}{13538} &
+  \multicolumn{1}{r|}{23} &
+  \multicolumn{1}{r|}{52} &
+  \multicolumn{1}{r|}{69100} \\ \hline
+\multicolumn{1}{|r|}{66} &
+  \multicolumn{1}{r|}{15} &
+  \multicolumn{1}{r|}{13538} &
+  \multicolumn{1}{r|}{23} &
+  \multicolumn{1}{r|}{51} &
+  67700 &
+  \multicolumn{1}{r|}{66} &
+  \multicolumn{1}{r|}{16} &
+  \multicolumn{1}{r|}{13540} &
+  \multicolumn{1}{r|}{22} &
+  \multicolumn{1}{r|}{50} &
+  \multicolumn{1}{r|}{66400} \\ \hline
+\multicolumn{1}{|r|}{69} &
+  \multicolumn{1}{r|}{14} &
+  \multicolumn{1}{r|}{13536} &
+  \multicolumn{1}{r|}{24} &
+  \multicolumn{1}{r|}{55} &
+  73000 &
+  \multicolumn{1}{r|}{65} &
+  \multicolumn{1}{r|}{17} &
+  \multicolumn{1}{r|}{13543} &
+  \multicolumn{1}{r|}{21} &
+  \multicolumn{1}{r|}{48} &
+  \multicolumn{1}{r|}{63800} \\ \hline
+\multicolumn{1}{|r|}{70} &
+  \multicolumn{1}{r|}{12} &
+  \multicolumn{1}{r|}{13534} &
+  \multicolumn{1}{r|}{25} &
+  \multicolumn{1}{r|}{58} &
+  77000 &
+  \multicolumn{1}{r|}{64} &
+  \multicolumn{1}{r|}{18} &
+  \multicolumn{1}{r|}{13546} &
+  \multicolumn{1}{r|}{20} &
+  \multicolumn{1}{r|}{46} &
+  \multicolumn{1}{r|}{61100} \\ \hline
+\multicolumn{1}{|r|}{72} &
+  \multicolumn{1}{r|}{10} &
+  \multicolumn{1}{r|}{13531} &
+  \multicolumn{1}{r|}{26} &
+  \multicolumn{1}{r|}{62} &
+  82300 &
+  \multicolumn{1}{r|}{62} &
+  \multicolumn{1}{r|}{19} &
+  \multicolumn{1}{r|}{13547} &
+  \multicolumn{1}{r|}{19} &
+  \multicolumn{1}{r|}{43} &
+  \multicolumn{1}{r|}{57100} \\ \hline
+\multicolumn{1}{|r|}{74} &
+  \multicolumn{1}{r|}{8} &
+  \multicolumn{1}{r|}{13529} &
+  \multicolumn{1}{r|}{27} &
+  \multicolumn{1}{r|}{66} &
+  87600 &
+  \multicolumn{1}{r|}{61} &
+  \multicolumn{1}{r|}{20} &
+  \multicolumn{1}{r|}{13549} &
+  \multicolumn{1}{r|}{18} &
+  \multicolumn{1}{r|}{41} &
+  \multicolumn{1}{r|}{54500} \\ \hline
+\multicolumn{1}{|r|}{76} &
+  \multicolumn{1}{r|}{6} &
+  \multicolumn{1}{r|}{13526} &
+  \multicolumn{1}{r|}{28} &
+  \multicolumn{1}{r|}{70} &
+  92900 &
+  \multicolumn{1}{r|}{60} &
+  \multicolumn{1}{r|}{21} &
+  \multicolumn{1}{r|}{13552} &
+  \multicolumn{1}{r|}{17} &
+  \multicolumn{1}{r|}{39} &
+  \multicolumn{1}{r|}{51900} \\ \hline
+\multicolumn{1}{|r|}{78} &
+  \multicolumn{1}{r|}{5} &
+  \multicolumn{1}{r|}{13523} &
+  \multicolumn{1}{r|}{29} &
+  \multicolumn{1}{r|}{73} &
+  96800 &
+  \multicolumn{1}{r|}{59} &
+  \multicolumn{1}{r|}{22} &
+  \multicolumn{1}{r|}{13555} &
+  \multicolumn{1}{r|}{16} &
+  \multicolumn{1}{r|}{37} &
+  \multicolumn{1}{r|}{49200} \\ \hline
+\multicolumn{1}{|r|}{80} &
+  \multicolumn{1}{r|}{3} &
+  \multicolumn{1}{r|}{13521} &
+  \multicolumn{1}{r|}{30} &
+  \multicolumn{1}{r|}{77} &
+  102100 &
+  \multicolumn{1}{r|}{58} &
+  \multicolumn{1}{r|}{23} &
+  \multicolumn{1}{r|}{13558} &
+  \multicolumn{1}{r|}{15} &
+  \multicolumn{1}{r|}{35} &
+  \multicolumn{1}{r|}{46600} \\ \hline
+\multicolumn{1}{|r|}{82} &
+  \multicolumn{1}{r|}{0} &
+  \multicolumn{1}{r|}{13518} &
+  \multicolumn{1}{r|}{31} &
+  \multicolumn{1}{r|}{82} &
+  108700 &
+  \multicolumn{1}{r|}{59} &
+  \multicolumn{1}{r|}{24} &
+  \multicolumn{1}{r|}{13561} &
+  \multicolumn{1}{r|}{14} &
+  \multicolumn{1}{r|}{35} &
+  \multicolumn{1}{r|}{46600} \\ \hline
+\end{tabular}
+}
+\end{table}
+	\aw{Таблица 1: результаты измерений}
+	
+	
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|rrr||rrr|}
+\hline
+\multicolumn{3}{|c||}{Повышение температуры}                                              & \multicolumn{3}{c|}{Понижение температуры}                                              \\ \hline \hline
+\multicolumn{1}{|c|}{$T$, $^o$C}    & \multicolumn{1}{c|}{1/$T$, K}      & \multicolumn{1}{c||}{$\ln P$} & \multicolumn{1}{c|}{$T$, $^o$C}  & \multicolumn{1}{c|}{1/$T$, K}      & \multicolumn{1}{c|}{$\ln P$} \\ \hline
+\multicolumn{1}{|r|}{13.8} & \multicolumn{1}{r|}{0.003487} & 10.68969                 & \multicolumn{1}{r|}{31} & \multicolumn{1}{r|}{0.032258} & 11.59673                 \\ \hline
+\multicolumn{1}{|r|}{15} & \multicolumn{1}{r|}{0.003472} & 10.68947 & \multicolumn{1}{r|}{30} & \multicolumn{1}{r|}{0.033333} & 11.52096 \\ \hline
+\multicolumn{1}{|r|}{16} & \multicolumn{1}{r|}{0.003460}  & 10.74809 & \multicolumn{1}{r|}{29} & \multicolumn{1}{r|}{0.034483} & 11.45306 \\ \hline
+\multicolumn{1}{|r|}{17} & \multicolumn{1}{r|}{0.003448} & 10.80344 & \multicolumn{1}{r|}{28} & \multicolumn{1}{r|}{0.035714} & 11.41011 \\ \hline
+\multicolumn{1}{|r|}{18} & \multicolumn{1}{r|}{0.003436} & 10.85586 & \multicolumn{1}{r|}{27} & \multicolumn{1}{r|}{0.037037} & 11.36521 \\ \hline
+\multicolumn{1}{|r|}{19} & \multicolumn{1}{r|}{0.003425} & 10.90572 & \multicolumn{1}{r|}{26} & \multicolumn{1}{r|}{0.038462} & 11.31811 \\ \hline
+\multicolumn{1}{|r|}{20} & \multicolumn{1}{r|}{0.003413} & 10.97627 & \multicolumn{1}{r|}{25} & \multicolumn{1}{r|}{0.040000}     & 11.26873 \\ \hline
+\multicolumn{1}{|r|}{21} & \multicolumn{1}{r|}{0.003401} & 11.04200   & \multicolumn{1}{r|}{24} & \multicolumn{1}{r|}{0.041667} & 11.19867 \\ \hline
+\multicolumn{1}{|r|}{22} & \multicolumn{1}{r|}{0.003390}  & 11.08346 & \multicolumn{1}{r|}{23} & \multicolumn{1}{r|}{0.043478} & 11.14273 \\ \hline
+\multicolumn{1}{|r|}{23} & \multicolumn{1}{r|}{0.003378} & 11.12331 & \multicolumn{1}{r|}{22} & \multicolumn{1}{r|}{0.045455} & 11.10366 \\ \hline
+\multicolumn{1}{|r|}{24} & \multicolumn{1}{r|}{0.003367} & 11.19867 & \multicolumn{1}{r|}{21} & \multicolumn{1}{r|}{0.047619} & 11.06306 \\ \hline
+\multicolumn{1}{|r|}{25} & \multicolumn{1}{r|}{0.003356} & 11.25164 & \multicolumn{1}{r|}{20} & \multicolumn{1}{r|}{0.050000}     & 11.02072 \\ \hline
+\multicolumn{1}{|r|}{26} & \multicolumn{1}{r|}{0.003344} & 11.31811 & \multicolumn{1}{r|}{19} & \multicolumn{1}{r|}{0.052632} & 10.95335 \\ \hline
+\multicolumn{1}{|r|}{27} & \multicolumn{1}{r|}{0.003333} & 11.38048 & \multicolumn{1}{r|}{18} & \multicolumn{1}{r|}{0.055556} & 10.90587 \\ \hline
+\multicolumn{1}{|r|}{28} & \multicolumn{1}{r|}{0.003322} & 11.43910  & \multicolumn{1}{r|}{17} & \multicolumn{1}{r|}{0.058824} & 10.85608 \\ \hline
+\multicolumn{1}{|r|}{29} & \multicolumn{1}{r|}{0.003311} & 11.48084 & \multicolumn{1}{r|}{16} & \multicolumn{1}{r|}{0.062500}   & 10.80366 \\ \hline
+\multicolumn{1}{|r|}{30} & \multicolumn{1}{r|}{0.003300}   & 11.53404 & \multicolumn{1}{r|}{15} & \multicolumn{1}{r|}{0.066667} & 10.74831 \\ \hline
+\multicolumn{1}{|r|}{31} & \multicolumn{1}{r|}{0.003289} & 11.59673 & \multicolumn{1}{r|}{14} & \multicolumn{1}{r|}{0.071429} & 10.74853 \\ \hline
+\end{tabular}
+\end{table}	
+	\aw{Таблица 2: зависимость $\ln P$ от $1 / T$}
+	По приведённым выше данным построены графики. Зависимость $\ln P$ от $1 / T$ - линейная.
+	\img{plot_1.png}{0.37}{Рисунок 2: графики зависимости давления от температуры при повышении и понижении температуры}
+	\img{plot_2.png}{0.37}{Рисунок 3: графики зависимости $\ln P$ от $1/T$ при повышении и понижении температуры}
+	\n
+	По этим графикам, используя формулу (4), можно найти значения $L$:
+	\begin{itemize}
+	\item $L_{\w{пов}} = 40300$ $\frac{\w{Дж}}{\w{моль}}$
+	\item $L_{\w{пон}} = 36400$ $\frac{\w{Дж}}{\w{моль}}$
+	\end{itemize}
+	Переводя в удельные теплоты делением на молярную массу исследуемой жидкости ($\mu = 46.07 \frac{\w{г}}{\w{моль}}$), получим:
+	\begin{itemize}
+	\item $L_{\w{пов}} = 875000$ $\frac{\w{Дж}}{\w{кг}}$
+	\item $L_{\w{пон}} = 791000$ $\frac{\w{Дж}}{\w{кг}}$
+	\end{itemize}
+	\subsection*{Расчёт погрешностей}
+	\begin{itemize}
+	\item $R$, $\rho$, $g$, $\mu$ считаем константами без погрешности
+	\item $\sigma_{h} = 1$ мм
+	\item $\sigma_{\Delta h} = \sqrt{2} \sigma_{h} \approx 1.5$ мм
+	\item $\sigma_{T} = 0.5$ $^o$C
+	\item $\sigma_{P} = \rho g \sigma_{\Delta h} \approx 200$ Па
+	\item $\sigma_{\frac{d(\ln P)}{d(1 / T)}}$ определяется программно методом наименьших квадратов
+	\item $\sigma_{L_{\w{мол}}} = R \x \sigma_{\frac{d(\ln P)}{d(1 / T)}} \approx 700$ $\frac{\w{Дж}}{\w{моль}}$
+	\item $\sigma_{L_{\w{уд}}} = \frac{1}{\mu} \x \sigma_{L_{\w{мол}}} \approx 15000$ $\frac{\w{Дж}}{\w{кг}}$
+	\end{itemize}
+	\subsection*{Вывод}
+	В ходе эксперимента были получены два значения удельной теплоёмкости спирта: $L_{\w{пов}} = (875 \pm 15)$ $\frac{\w{кДж}}{\w{кг}}$ и $L_{\w{пон}} = (791 \pm 15)$ $\frac{\w{кДж}}{\w{кг}}$. Табличное значение $L = 837$ $\frac{\w{кДж}}{\w{кг}}$ в пределах погрешности не сходится ни с одним полученным значением. Сами найденные величины также сильно отличаются друг от друга. Расхождение можно объяснить методом измерения температуры. Требовалось некоторое время для установления равновесия между термостатом и исследуемой жидкостью. Мы попытались учесть это и измеряли давление при температуре выше (при нагревании) или ниже (при охлаждении) требуемой температуры на $\approx 0.3-0.5 ^o$C. Такая оценка была сделана наугад и могла не соответствовать реальности. Охлаждение происходило быстрее, поэтому, возможно, стоило ожидать чуть меньше. Ещё одной причиной может быть качество сборки установки. Крышка термостата была приподнята, из-за этого ртутный манометр был наклонён на небольшой угол, который мог повлиять в конечном счёте на показания давления. Значение, полученное на подъёме температуры, находится ближе к табличному.
+\end{document}

@@ -1,0 +1,339 @@
+\input{../main.tex}
+
+\begin{document}
+	\section*{Работа 1.3.3}	
+	\section*{Измерение вязкости воздуха по течению в тонких трубках}
+	\subsection*{Андрей Киркича, Б01-202, МФТИ, 2023}
+	\n
+	\textbf{Цель работы: }
+	экспериментально исследовать свойства течения газов по тонким трубкам при различных числах Рейнольдса; выявить область применимости закона Пуазейля и с его помощью определить коэффициент вязкости воздуха.
+	\n\n
+	\textbf{В работе используются: }
+	система подачи воздуха (компрессор, подводящие трубки); газовый счётчик барабанного типа; спиртовой микроманометр с регулируемым наклоном; набор трубок различного диаметра с выходами для подсоединения микроманометра; секундомер.
+	\subsection*{Теоретичские сведения}\n
+	Закон Ньютона:
+	\beb{\tau_{xy} = -\eta \frac{\partial \upsilon_{x}}{\partial y}}
+	\aw{$\tau_{xy}$ - касательное напряжение между слоями, направленное вдоль оси $x$; $\upsilon_{x}$ - скорость течения, зависящая от координаты $y$; $\eta$ - коэффициент динамической вязкости (вязкость) среды}
+	\und{Объёмный расход} $Q$ - объём жидкости, протекающий через сечение трубы в единицу времени.\n\n
+	Число Рейнольдса:
+	\beb{Re = \frac{\rho u a}{\eta}}
+	\aw{где $\rho$ - плотность среды; $u$ - характерная скорость потока; $a$ - характерный размер системы; $\eta$ - вязкость}
+	\beb{\overline{u} = \frac{Q}{\pi r^2}}
+	Формула Пуазейля:
+	\beb{Q = \frac{\pi r^4 \Delta P}{8 \eta l}}
+	\beb{l_{\w{уст}} \approx 0.2 r \x Re}
+	\beb{\eta \sim 1/3 \rho \overline{\upsilon} \lambda, \lambda \sim \frac{1}{n \pi d^2}}
+	Формулы (1) и (6) справедливы при $u \ll \overline{\upsilon}$ и характерных размерах, значительно превышающих длину свободного пробега молекул.
+	\subsection*{Методика измерений}\n
+	\img{pic_1.png}{2}{Рисунок 1: схема экспериментальной установки}\n
+	Поток воздуха под давлением, немного превышающим атмосферное, поступает через газовый счётчик в тонкие металлические трубки. Воздух нагнетается компрессором, интенсивность его подачи регулируется краном К. Трубки снабжены съёмными заглушками на концах и рядом миллиметровых отверстий, к которым можно подключать микроманометр. В рабочем состоянии открыта заглушка на одной (рабочей) трубке, микроманометр подключён к двум её выводам, а все остальные отверстия плотно закрыты пробками.\n\n
+Перед входом в газовый счётчик установлен водяной U-образный мано-метр. Он служит для измерения давления газа на входе, а также предохраняет счётчик от выхода из строя. При превышении максимального избыточного давления на входе счётчика ($\approx$30 см вод. ст.) вода выплёскивается из трубки в защитный баллон Б, создавая шум и привлекая к себе внимание экспериментатора.
+	\img{pic_2.png}{2}{Рисунок 2: схема барабанного газового счётчика}
+	\subsection*{Результаты измерений}\n
+	Таблица с результатами измерений зависимости потока от разности давлений представлена ниже. Давление переводится из делений манометра в паскали по формуле: $\Delta P = 9.8067 \x N \x K \x 0.9975$ Па
+\begin{table}[H]
+\centering
+\resizebox{450pt}{!}{
+\begin{tabular}{|rrrrrr||rrrrrr|}
+\hline
+\multicolumn{6}{|c||}{$d_{1} = 3.95$ мм} &
+  \multicolumn{6}{c|}{$d_{2} = 5.10$ мм} \\ \hline
+\multicolumn{1}{|c|}{$K$} &
+  \multicolumn{1}{c|}{$V$, л} &
+  \multicolumn{1}{c|}{$t$, с} &
+  \multicolumn{1}{c|}{$Q$, л/с} &
+  \multicolumn{1}{c|}{$N$, дел} &
+  \multicolumn{1}{c||}{$\Delta P$, Па} &
+  \multicolumn{1}{c|}{$K$} &
+  \multicolumn{1}{c|}{$V$, л} &
+  \multicolumn{1}{c|}{$t$, с} &
+  \multicolumn{1}{c|}{$Q$, л/с} &
+  \multicolumn{1}{c|}{$N$, дел} &
+  \multicolumn{1}{c|}{$\Delta P$, Па} \\ \hline \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{89.7} &
+  \multicolumn{1}{r|}{0.03} &
+  \multicolumn{1}{r|}{23} &
+  45 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{24.7} &
+  \multicolumn{1}{r|}{0.10} &
+  \multicolumn{1}{r|}{24} &
+  47 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{48.9} &
+  \multicolumn{1}{r|}{0.05} &
+  \multicolumn{1}{r|}{42} &
+  82 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{21.0} &
+  \multicolumn{1}{r|}{0.12} &
+  \multicolumn{1}{r|}{30} &
+  59 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{73.0} &
+  \multicolumn{1}{r|}{0.03} &
+  \multicolumn{1}{r|}{28} &
+  55 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{18.0} &
+  \multicolumn{1}{r|}{0.14} &
+  \multicolumn{1}{r|}{38} &
+  74 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{44.2} &
+  \multicolumn{1}{r|}{0.06} &
+  \multicolumn{1}{r|}{46} &
+  90 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{17.0} &
+  \multicolumn{1}{r|}{0.15} &
+  \multicolumn{1}{r|}{45} &
+  88 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{39.7} &
+  \multicolumn{1}{r|}{0.06} &
+  \multicolumn{1}{r|}{52} &
+  102 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{16.2} &
+  \multicolumn{1}{r|}{0.15} &
+  \multicolumn{1}{r|}{55} &
+  108 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{35.0} &
+  \multicolumn{1}{r|}{0.07} &
+  \multicolumn{1}{r|}{60} &
+  117 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{15.9} &
+  \multicolumn{1}{r|}{0.16} &
+  \multicolumn{1}{r|}{62} &
+  121 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{30.0} &
+  \multicolumn{1}{r|}{0.08} &
+  \multicolumn{1}{r|}{70} &
+  137 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{15.0} &
+  \multicolumn{1}{r|}{0.17} &
+  \multicolumn{1}{r|}{70} &
+  137 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{27.6} &
+  \multicolumn{1}{r|}{0.01} &
+  \multicolumn{1}{r|}{79} &
+  155 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{13.9} &
+  \multicolumn{1}{r|}{0.18} &
+  \multicolumn{1}{r|}{79} &
+  155 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{26.5} &
+  \multicolumn{1}{r|}{0.09} &
+  \multicolumn{1}{r|}{85} &
+  166 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{13.2} &
+  \multicolumn{1}{r|}{0.19} &
+  \multicolumn{1}{r|}{90} &
+  176 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{25.0} &
+  \multicolumn{1}{r|}{0.10} &
+  \multicolumn{1}{r|}{94} &
+  184 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{12.5} &
+  \multicolumn{1}{r|}{0.20} &
+  \multicolumn{1}{r|}{97} &
+  190 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{23.7} &
+  \multicolumn{1}{r|}{0.11} &
+  \multicolumn{1}{r|}{110} &
+  215 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{11.9} &
+  \multicolumn{1}{r|}{0.21} &
+  \multicolumn{1}{r|}{106} &
+  207 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{22.7} &
+  \multicolumn{1}{r|}{0.11} &
+  \multicolumn{1}{r|}{130} &
+  254 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{11.0} &
+  \multicolumn{1}{r|}{0.23} &
+  \multicolumn{1}{r|}{119} &
+  233 \\ \hline
+\multicolumn{1}{|r|}{0.3} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{22.0} &
+  \multicolumn{1}{r|}{0.11} &
+  \multicolumn{1}{r|}{98} &
+  288 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{10.4} &
+  \multicolumn{1}{r|}{0.24} &
+  \multicolumn{1}{r|}{135} &
+  264 \\ \hline
+\multicolumn{1}{|r|}{0.3} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{19.3} &
+  \multicolumn{1}{r|}{0.13} &
+  \multicolumn{1}{r|}{130} &
+  382 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{9.9} &
+  \multicolumn{1}{r|}{0.25} &
+  \multicolumn{1}{r|}{150} &
+  293 \\ \hline
+\multicolumn{1}{|r|}{0.3} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{18.1} &
+  \multicolumn{1}{r|}{0.14} &
+  \multicolumn{1}{r|}{155} &
+  455 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{9.6} &
+  \multicolumn{1}{r|}{0.26} &
+  \multicolumn{1}{r|}{155} &
+  303 \\ \hline
+\multicolumn{1}{|r|}{0.3} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{16.8} &
+  \multicolumn{1}{r|}{0.15} &
+  \multicolumn{1}{r|}{175} &
+  514 &
+  \multicolumn{6}{r|}{\multirow{2}{*}{}} \\ \cline{1-6}
+\multicolumn{1}{|r|}{0.3} &
+  \multicolumn{1}{r|}{2.5} &
+  \multicolumn{1}{r|}{16.0} &
+  \multicolumn{1}{r|}{0.16} &
+  \multicolumn{1}{r|}{194} &
+  569 &
+  \multicolumn{6}{r|}{} \\ \hline
+\end{tabular}
+}
+\end{table}
+	\aw{Таблица 1: результаты измерения зависимости объёмного расхода от разности давлений}
+	По этим данным были построены графики. На них хорошо заметна точка, где характер зависимости меняется. Это граница перехода от ламинарного течения к турбулентному.\n\n
+	Пользуясь коэффициентами наклона линейных участков графиков, по формуле (4) можно определить вязкость среды:
+	\begin{itemize}
+	\item $\eta_{1} = 2.14 \x 10^{-5}$ Па$\x$с
+	\item $\eta_{2} = 2.42 \x 10^{-5}$ Па$\x$с
+	\end{itemize}
+	Первое значение находится ближе к табличному (при температуре $20 \w{ } ^o$C), поэтому в дальнейших вычислениях будем использовать именно его.\n\n
+	Критические числа Рейнольдса можно получить, используя формулу (2), в качестве $a$ взять радиус трубки $r$, а в качестве $u$ - величину $\frac{Q}{\pi r^2}$:
+	\begin{itemize}
+	\item $Re_{\w{кр}_1} = 904$
+	\item $Re_{\w{кр}_2} = 980$
+	\end{itemize}
+	\img{plot_1.png}{0.37}{Рисунок 3: график зависимости $Q (\Delta P)$ в трубке диаметром $d_{1} = 3.95$ мм}
+	\img{plot_2.png}{0.37}{Рисунок 4: график зависимости $Q (\Delta P)$ в трубке диаметром $d_{2} = 5.10$ мм}\n
+	Также были проведены измерения распределения давления газа вдоль трубки. Ниже приведены результаты.
+	\begin{table}[H]
+	\centering
+\begin{tabular}{|rrrr||rrrr|}
+\hline
+\multicolumn{4}{|c||}{$d_{1} = 3.95$ мм} &
+  \multicolumn{4}{c|}{$d_{2} = 5.10$ мм} \\ \hline
+\multicolumn{1}{|c|}{$K$} &
+  \multicolumn{1}{c|}{$L$, м} &
+  \multicolumn{1}{c|}{$N$, дел} &
+  \multicolumn{1}{c||}{$\Delta P$, Па} &
+  \multicolumn{1}{c|}{$K$} &
+  \multicolumn{1}{c|}{$L$, м} &
+  \multicolumn{1}{c|}{$N$, дел} &
+  \multicolumn{1}{c|}{$\Delta P$} \\ \hline \hline
+\multicolumn{1}{|r|}{0.4} &
+  \multicolumn{1}{r|}{1.309} &
+  \multicolumn{1}{r|}{123} &
+  481 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{1.309} &
+  \multicolumn{1}{r|}{164} &
+  321 \\ \hline
+\multicolumn{1}{|r|}{0.4} &
+  \multicolumn{1}{r|}{0.809} &
+  \multicolumn{1}{r|}{86} &
+  337 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{0.809} &
+  \multicolumn{1}{r|}{122} &
+  239 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{0.409} &
+  \multicolumn{1}{r|}{98} &
+  192 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{0.409} &
+  \multicolumn{1}{r|}{83} &
+  162 \\ \hline
+\multicolumn{1}{|r|}{0.2} &
+  \multicolumn{1}{r|}{0.109} &
+  \multicolumn{1}{r|}{46} &
+  90 &
+  \multicolumn{1}{r|}{0.2} &
+  \multicolumn{1}{r|}{0.109} &
+  \multicolumn{1}{r|}{47} &
+  92 \\ \hline
+\end{tabular}
+\aw{Таблица 2: результаты измерений перепада давления от длины участка трубы}
+\end{table}
+	\img{plot_3.png}{0.5}{Рисунок 5: график зависимости перепада давления от длины участка трубы диаметром $d_{1} = 3.95$ мм}
+	\img{plot_4.png}{0.5}{Рисунок 6: график зависимости перепада давления от длины участка трубы диаметром $d_{2} = 5.10$ мм}\n
+	Видно, что графики отражают линейную зависимость между $\Delta P$ и $L$. Значит, и давление в трубе $P(x) = P_0 - \frac{\Delta P}{L} x$ линейно зависит от $x$.
+	\subsection*{Расчёт погрешностей}
+	\begin{itemize}
+	\item $K$, $\pi$, $\rho$ считаем константами без погрешности
+	\item $\sigma_{d} = 0.05$ мм
+	\item $\sigma_{r} = 0.03$ мм
+	\item $\sigma_{V} = 0.02$ л
+	\item $\sigma_{t} = 0.4$ c
+	\item $\sigma_{Q} = Q \x \sqrt{\left (\frac{\sigma_{V}}{V} \right )^2 + \left (\frac{\sigma_{t}}{t} \right )^2}$\n
+	$\varepsilon_{Q} \approx 1-3 \%$
+	\item $\sigma_{N} = 1$ дел
+	\item $\sigma_{\Delta P} = 9.8067 \x K \x 0.9975 \x \sigma_{N}$\n
+	$\sigma_{\Delta P_{K = 0.2}} = 2$ Па,
+	$\sigma_{\Delta P_{K = 0.3}} = 3$ Па,
+	$\sigma_{\Delta P_{K = 0.4}} = 4$ Па
+	\item $\sigma_{\frac{dQ}{d(\Delta P)}}$ считается программно методом наименьших квадратов
+	\item $\Delta L = 0.001$ м
+	\item $\varepsilon_{\eta} = \frac{\pi}{8} \sqrt{16 \left ( \frac{\sigma_{r}}{r} \right )^2 + \left (\frac{\sigma_{dQ/d(\Delta P)}}{dQ/d(\Delta P)} \right )^2 + \left (\frac{\sigma_{L}}{L} \right )^2} \approx 3 \%$
+	\item $\varepsilon_{Re} = \frac{\rho}{\pi} \x \sqrt{\left (\frac{\sigma_{r}}{r} \right )^2 + \left (\frac{\sigma_{Q}}{Q} \right )^2 + \left (\frac{\sigma_{\eta}}{\eta} \right )^2} \approx 1.3 \%$
+	\end{itemize}
+	\subsection*{Вывод}
+	Были измерены зависимости потока в трубке от перепада давления и перепада давления от длины соответствующего участка трубы. В первом опыте отчётливо наблюдалась смена характера зависимости, свидетельствующая о переходе течения из ламинарного в турбулентный режим. С использованием графиков была расчитана вязкость воздуха в каждом опыте: $\eta_{1} = (2.14 \pm 0.07) \x 10^{-5}$ Па$\x$с и $\eta_{2} = (2.42 \pm 0.08) \x 10^{-5}$ Па$\x$с. Значения не сходятся в пределах погрешности, они также расходятся с табличными данными ($\eta = 1.8 \x 10^{-5}$ Па$\x$с). Одной из причин может быть низкая точность измерения потока. В качестве погрешности времени была взята величина $0.4$ c. $0.2$ c - это среднее время реакции человека на визуальный сигнал, ещё $0.2$ с добавлены с учётом того, что экспериментатор плохо спал и не позавтракал. Ещё одна причина - низкая выборка точек во второй серии измерений. Большинство точек было снято в турбулентном режиме. Стоило обратить больше внимания на то, где флуктуации столбика микроманометра увеличились. Также были посчитаны критические числа Рейнольдса: $Re_{\w{кр}_1} = (904 \pm 12)$, $Re_{\w{кр}_2} = (980 \pm 13)$. Они близки к $1000$. По результатам второго опыта можно заключить, что давление в трубке линейно убывает с ростом координаты вдоль трубки. Перепад давления на определённом участке трубы зависит от диаметра трубы, так как графики $\Delta P (L)$ для разных труб имеют разный наклон.
+\end{document}
